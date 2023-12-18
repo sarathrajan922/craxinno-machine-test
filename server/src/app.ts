@@ -1,30 +1,32 @@
 //import express and app type
-import express,{Application} from 'express'
+import express, { Application } from "express";
 
 //import http module
-import http from 'http'
+import http from "http";
 
 //import server and express config.
 
-import serverConfig from './frameworks/server/httpServer';
-import expressConfig from './frameworks/server/expressConfig';
+import serverConfig from "./frameworks/server/httpServer";
+import expressConfig from "./frameworks/server/expressConfig";
 
-//import mongodb connection 
+//import mongodb connection
 
-import connectDB from './frameworks/database/mongodb/connection';
+import connectDB from "./frameworks/database/mongodb/connection";
 
-//import routes 
+//import routes
+import routes from "./frameworks/server/routes";
+import errorHandlingMiddleware from "./frameworks/server/middleware/errorHandle";
 
-const app:Application = express();
+const app: Application = express();
 
 //create server and passing with server config
-const server = http.createServer(app)
-const {startServer} = serverConfig(server) 
-
+const server = http.createServer(app);
+const { startServer } = serverConfig(server);
 
 // calling the all the configurations
 expressConfig(app);
 connectDB();
+routes(app);
 
-
-startServer()
+app.use(errorHandlingMiddleware);
+startServer();
