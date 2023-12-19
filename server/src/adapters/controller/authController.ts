@@ -17,7 +17,7 @@ const authController = (
   const authServices = authServiceInterface(authService());
 
   const userRegister = asyncHandler(async (req: Request, res: Response) => {
-    console.log("userRegister working...");
+   
     const user: UserRegisterInterface = req.body;
     const { token, userData } = await userRegisterUseCase(
       user,
