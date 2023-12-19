@@ -17,4 +17,5 @@ export interface UserPersonalInfoInterface{
 export interface UserFinancialInfoInterface{
     currentEmployeeStatus : string;
     additionalSavingInvestment:number;
+    userId:string;
 }

@@ -14,6 +14,7 @@ const userRoutes = ()=>{
     );
 
     router.post('/personalInfo',authenticationMiddleware,userRoleCheckMiddleware,controller.addPersonalInfo);
+    router.post('/financialInfo',authenticationMiddleware,userRoleCheckMiddleware,controller.addFinancialInfo)
     return router;
 }
 

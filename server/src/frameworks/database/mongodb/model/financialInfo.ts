@@ -9,6 +9,10 @@ const userFinanceSchema = new Schema({
     additionalSavingInvestment :{
         type: Number,
         required: [true,"please provide additionalSavingInvestment field."]
+    },
+    userId:{
+        type:String,
+        required: [true,"please provide a userId."]
     }
 });
 
