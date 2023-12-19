@@ -31,6 +31,7 @@ export const userRepositoryMongoDB = ()=>{
         getUserEmail,
         getUserById,
         addPersonalInfo,
+        addFinancialInfo
         
     }
 }
