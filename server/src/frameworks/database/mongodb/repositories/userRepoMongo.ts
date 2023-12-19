@@ -1,5 +1,7 @@
 import User from "../model/userModel";
-import { UserRegisterInterface } from "../../../../types/user";
+import { UserRegisterInterface, UserPersonalInfoInterface, UserFinancialInfoInterface } from "../../../../types/user";
+import PersonalInfo from "../model/personalInfo";
+import FinancialInfo from "../model/financialInfo";
 
 export const userRepositoryMongoDB = ()=>{
     const addUser = async (user: UserRegisterInterface)=>{
@@ -10,9 +12,26 @@ export const userRepositoryMongoDB = ()=>{
         return User.findOne({email});
     }
 
+    const getUserById = async(userId:string)=>{
+        return User.findOne({_id:userId})
+    }
+
+    const addPersonalInfo = async(data:UserPersonalInfoInterface)=>{
+        return PersonalInfo.create(data)
+    }
+
+    const addFinancialInfo = async(data:UserFinancialInfoInterface)=>{
+        return FinancialInfo.create(data)
+    }
+
+    
+
     return {
         addUser,
-        getUserEmail
+        getUserEmail,
+        getUserById,
+        addPersonalInfo,
+        
     }
 }
 
