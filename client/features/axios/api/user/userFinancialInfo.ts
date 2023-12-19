@@ -1,14 +1,13 @@
 import axios,{AxiosRequestConfig} from "axios";
-import BASE_URL,{urls} from "@/config";
 import userSetupAxiosInterceptors from "../../interceptors/userInterceptor";
-
+import BASE_URL,{urls} from "@/config";
 
 const api = userSetupAxiosInterceptors();
 
-const userPersonalInfoUpload = async(values:any)=>{
+const userFinancialInfoUpload = async(values: any)=>{
     try{
-        const config:AxiosRequestConfig = {
-            url:BASE_URL+urls.USER_PERSONAL_INFO_SUBMIT,
+        const config:AxiosRequestConfig={
+            url:BASE_URL+urls.USER_FINANCIAL_INFO_SUBMIT,
             method:"post",
             data:values
         }
@@ -22,5 +21,3 @@ const userPersonalInfoUpload = async(values:any)=>{
         }
       }
 }
-
-export default userPersonalInfoUpload;
