@@ -1,6 +1,7 @@
-import axios,{AxiosRequestConfig} from "axios";
+import {AxiosRequestConfig} from "axios";
 import userSetupAxiosInterceptors from "../../interceptors/userInterceptor";
 import BASE_URL,{urls} from "@/config";
+
 
 const api = userSetupAxiosInterceptors();
 
@@ -21,3 +22,5 @@ const userFinancialInfoUpload = async(values: any)=>{
         }
       }
 }
+
+export default userFinancialInfoUpload;

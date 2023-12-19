@@ -1,4 +1,4 @@
-import axios,{AxiosRequestConfig} from "axios";
+import {AxiosRequestConfig} from "axios";
 import BASE_URL,{urls} from "@/config";
 import userSetupAxiosInterceptors from "../../interceptors/userInterceptor";
 
