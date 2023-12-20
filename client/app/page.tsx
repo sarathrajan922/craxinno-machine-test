@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import SignUpForm from "@/components/signUp";
 import PersonalInfo from "@/components/PersonalInfo";
+import FinancialInfo from "@/components/financialInfo";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
     {/* <div className="text-black">
       Hello world
     </div> */}
-    {/* <SignUpForm/> */}
-    <PersonalInfo/>
+    <SignUpForm/>
+    {/* <PersonalInfo/> */}
+    {/* <FinancialInfo/> */}
 
     </main>
     </>
