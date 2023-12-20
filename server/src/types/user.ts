@@ -8,6 +8,7 @@ export interface UserRegisterInterface {
 export interface UserPersonalInfoInterface{
     gender: string;
     fullName: string;
+    DOB:string;
     currentAddress:string;
     durationAtAddress:string;
     aboutYourSelf:string;

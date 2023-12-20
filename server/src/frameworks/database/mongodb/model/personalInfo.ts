@@ -9,6 +9,10 @@ const personalInfoSchema = new Schema({
         type:String,
         required:[true,"please provide a fullName."]
     },
+    DOB:{
+        type:String,
+        required:[true,"please provide  DOB field"]
+    },
     currentAddress:{
         type:String,
         required: [true,'please provide a valid current Address']

@@ -1,5 +1,8 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import Header from '@/components/header'
 import SignUpForm from '@/components/signUp'
+import PersonalInfo from '@/components/personalInfo'
+
 
 
 export default function Home() {
@@ -7,8 +10,12 @@ export default function Home() {
    <>
    <Header/>
    <main className='flex min-h-screen flex-col items-center justify-between  bg-white'>
-    <SignUpForm/>
+    {/* <SignUpForm/> */}
+    <PersonalInfo/>
    </main>
+
+ 
+
    </>
   )
 }
