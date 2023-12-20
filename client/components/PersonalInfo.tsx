@@ -22,10 +22,6 @@ const PersonalInfo:React.FC = () => {
     const value = event.target.value;
     setSelectedValue(value);
   };
-
-
-
-
   const {
     register,
     handleSubmit,
@@ -48,6 +44,8 @@ const PersonalInfo:React.FC = () => {
     data.gender = selectedValue
     
     //api call for personal info submit
+
+
   }
 
   
@@ -215,7 +213,7 @@ const PersonalInfo:React.FC = () => {
       </button>
 
       </form>
-      <pre>{JSON.stringify(watch(), null, 2)}</pre>
+      {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
     </div>
   );
 };
