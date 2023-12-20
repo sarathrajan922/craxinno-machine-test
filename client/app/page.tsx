@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import SignUpForm from "@/components/signUp";
+import PersonalInfo from "@/components/PersonalInfo";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
     {/* <div className="text-black">
       Hello world
     </div> */}
-    <SignUpForm/>
-    
+    {/* <SignUpForm/> */}
+    <PersonalInfo/>
+
     </main>
     </>
   )
