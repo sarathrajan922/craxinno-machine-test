@@ -19,4 +19,4 @@ const registerUser = async(values:any)=>{
       }
 }
 
-export default registerUser
+export default registerUser;
