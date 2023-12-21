@@ -6,7 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userInfoSchema } from "@/validations/userRegisterInfo";
 import {registerUser} from "@/features/axios/api/user/userRegister";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -47,7 +47,6 @@ const SignUpForm = () => {
     }
     //here function call
     registerUser(data).then((response)=>{
-      console.log(response.token)
      localStorage.setItem('userToken',response?.token)
       router.push('/personal')
 

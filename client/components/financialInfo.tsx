@@ -5,7 +5,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { financialInfoSchema } from "@/validations/userFinancialInfo";
 import { userFinancialInfoUpload } from "@/features/axios/api/user/userFinancial";
-
+import { useRouter } from 'next/navigation';
 
 interface Inputs {
   [x: string]: string;
@@ -13,6 +13,7 @@ interface Inputs {
 }
 
 const FinancialInfo: React.FC = () => {
+  const router = useRouter()
   const [selectedValue, setSelectedValue] = useState("");
   const [selectionError, setSelectionError] = useState(false);
 
@@ -46,8 +47,8 @@ const FinancialInfo: React.FC = () => {
     console.log(data);
     //api call here
 
-    userFinancialInfoUpload(data).then((response)=>{
-      
+    userFinancialInfoUpload(data).then(()=>{
+      router.push('/profile')
     }).catch((err)=>{
       console.log(err.message)
     })
