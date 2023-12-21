@@ -8,13 +8,15 @@ export const userDbRepository = (repository:ReturnType<UserRepositoryMongoDB>)=>
     const getUserById = async(userId:string)=> await repository.getUserById(userId)
     const addUserPersonalInfo = async(data:UserPersonalInfoInterface)=> await repository.addPersonalInfo(data)
     const addUserFinancialInfo = async(data:UserFinancialInfoInterface)=> await repository.addFinancialInfo(data)
+    const fetchAllUserData = async(userId:string)=> await repository.fetchAllUserData(userId)
 
     return {
         addUser,
         getUserEmail,
         getUserById,
         addUserPersonalInfo,
-        addUserFinancialInfo
+        addUserFinancialInfo,
+        fetchAllUserData
     }
 }
 
