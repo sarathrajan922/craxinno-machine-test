@@ -5,7 +5,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalInfoSchema } from "@/validations/userPersonalInfo";
 import { userPersonalInfoUpload } from "@/features/axios/api/user/userPersonal";
-
+import { useRouter } from 'next/navigation';
 
 interface Inputs {
   gender: string;
@@ -17,7 +17,7 @@ interface Inputs {
 }
 
 const PersonalInfo:React.FC = () => {
- 
+   const router = useRouter()
   const [selectedValue, setSelectedValue] = useState('male');
   const handleSelectChange = (event: { target: { value: any; }; }) => {
     const value = event.target.value;
@@ -47,6 +47,7 @@ const PersonalInfo:React.FC = () => {
     //api call for personal info submit
     userPersonalInfoUpload(data).then((response)=>{
       console.log(response)
+      router.push('/financial')
     }).catch((err)=>{
       console.log(err.message)
     })
