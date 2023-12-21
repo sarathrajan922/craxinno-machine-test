@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { financialInfoSchema } from "@/validations/userFinancialInfo";
+import { userFinancialInfoUpload } from "@/features/axios/api/user/userFinancial";
 
 interface Inputs {
   [x: string]: string;
@@ -43,6 +44,12 @@ const FinancialInfo: React.FC = () => {
     data.currentEmployeeStatus = selectedValue;
     console.log(data);
     //api call here
+
+    userFinancialInfoUpload(data).then((response)=>{
+      
+    }).catch((err)=>{
+      console.log(err.message)
+    })
   };
 
   return (

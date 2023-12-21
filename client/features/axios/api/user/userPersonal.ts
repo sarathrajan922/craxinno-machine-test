@@ -5,7 +5,7 @@ import userSetupAxiosInterceptors from "../../interceptors/userInterceptor";
 
 const api = userSetupAxiosInterceptors();
 
-const userPersonalInfoUpload = async(values:any)=>{
+export const userPersonalInfoUpload = async(values:any)=>{
     try{
         const config:AxiosRequestConfig = {
             url:BASE_URL+urls.USER_PERSONAL_INFO_SUBMIT,
@@ -23,4 +23,3 @@ const userPersonalInfoUpload = async(values:any)=>{
       }
 }
 
-export default userPersonalInfoUpload;

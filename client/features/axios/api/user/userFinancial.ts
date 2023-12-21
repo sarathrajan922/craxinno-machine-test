@@ -5,7 +5,7 @@ import BASE_URL,{urls} from "@/config";
 
 const api = userSetupAxiosInterceptors();
 
-const userFinancialInfoUpload = async(values: any)=>{
+export const userFinancialInfoUpload = async(values: any)=>{
     try{
         const config:AxiosRequestConfig={
             url:BASE_URL+urls.USER_FINANCIAL_INFO_SUBMIT,
@@ -23,4 +23,3 @@ const userFinancialInfoUpload = async(values: any)=>{
       }
 }
 
-export default userFinancialInfoUpload;
