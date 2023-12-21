@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { financialInfoSchema } from "@/validations/userFinancialInfo";
 import { userFinancialInfoUpload } from "@/features/axios/api/user/userFinancial";
 
+
 interface Inputs {
   [x: string]: string;
   additionalSavingInvestment: string;
@@ -51,10 +52,12 @@ const FinancialInfo: React.FC = () => {
       console.log(err.message)
     })
   };
+  
 
   return (
     <div className="text-black flex mt-10 flex-col gap-3 w-96">
       <div className="flex flex-col justify-center mt-5  mx-auto">
+        
         <div className="flex items-center gap-2 mb-3 mx-auto">
           <button
             className="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[40px] h-9 max-h-[40px] text-xs bg-gray-200 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-full"

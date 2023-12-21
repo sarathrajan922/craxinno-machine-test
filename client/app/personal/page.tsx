@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import PersonalInfo from "@/components/personalInfo";
 import Header from "@/components/header";

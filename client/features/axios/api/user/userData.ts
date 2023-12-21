@@ -3,7 +3,7 @@ import BASE_URL, { urls } from "@/config";
 import userSetupAxiosInterceptors from "../../interceptors/userInterceptor";
 const api = userSetupAxiosInterceptors();
 
-const fetchUserData = async () => {
+export const fetchUserData = async () => {
   try {
     const config: AxiosRequestConfig = {
       url: BASE_URL + urls.FETCH_USER_DATA,
@@ -20,4 +20,4 @@ const fetchUserData = async () => {
   }
 };
 
-export default fetchUserData;
+

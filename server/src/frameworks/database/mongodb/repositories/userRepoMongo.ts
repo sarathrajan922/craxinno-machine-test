@@ -93,7 +93,8 @@ export const userRepositoryMongoDB = ()=>{
                   fullName: "$personalInfo.fullName",
                   currentAddress: "$personalInfo.currentAddress",
                   durationAtAddress: "$personalInfo.durationAtAddress",
-                  aboutYourSelf: "$personalInfo.aboutYourSelf"
+                  aboutYourSelf: "$personalInfo.aboutYourSelf",
+                  DOB:"$personalInfo.DOB"
                 },
                 financialInfo: {
                   currentEmployeeStatus: "$financialInfo.currentEmployeeStatus",
