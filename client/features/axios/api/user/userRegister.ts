@@ -1,7 +1,8 @@
+
 import axios,{AxiosRequestConfig} from "axios";
 import BASE_URL,{urls} from "@/config";
 
-const registerUser = async(values:any)=>{
+export const registerUser = async(values:any)=>{
     try{
         const config:AxiosRequestConfig={
             url:BASE_URL+urls.USER_REGISTER,
@@ -19,4 +20,3 @@ const registerUser = async(values:any)=>{
       }
 }
 
-export default registerUser;

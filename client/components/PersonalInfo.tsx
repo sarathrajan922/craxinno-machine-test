@@ -4,6 +4,7 @@ import React,{useState} from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalInfoSchema } from "@/validations/userPersonalInfo";
+import { userPersonalInfoUpload } from "@/features/axios/api/user/userPersonal";
 
 
 interface Inputs {
@@ -44,6 +45,11 @@ const PersonalInfo:React.FC = () => {
     data.gender = selectedValue
     
     //api call for personal info submit
+    userPersonalInfoUpload(data).then((response)=>{
+      console.log(response)
+    }).catch((err)=>{
+      console.log(err.message)
+    })
 
 
   }
